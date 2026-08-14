@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """
 email_soc_analyzer.py
 =====================
@@ -11,7 +11,7 @@ Dipendenze:
     pip install google-auth-oauthlib google-auth-httplib2 google-api-python-client
 
 Setup iniziale:
-    1. Crea un progetto su https://console.cloud.google.com
+    1. Crea un progetto su https://
     2. Abilita Gmail API
     3. Crea credenziali OAuth2 (App Desktop) → scarica credentials.json
     4. Metti credentials.json nella stessa cartella di questo script
@@ -40,7 +40,7 @@ from googleapiclient.discovery import build
 #  CONFIGURAZIONE OAuth2
 # ──────────────────────────────────────────────
 
-SCOPES           = ["https://www.googleapis.com/auth/gmail.readonly"]
+SCOPES           = ["https://"]
 TOKEN_FILE       = "token.json"
 CREDENTIALS_FILE = "credentials.json"
 
@@ -129,7 +129,7 @@ def get_gmail_service():
             if not os.path.exists(CREDENTIALS_FILE):
                 print(f"\n{RED}Errore: file '{CREDENTIALS_FILE}' non trovato.{RESET}")
                 print("  → Scaricalo da Google Cloud Console:")
-                print("    https://console.cloud.google.com → API e servizi → Credenziali")
+                print("    https:// → API e servizi → Credenziali")
                 sys.exit(1)
 
             info("Apertura browser per autenticazione Google...")
